@@ -81,10 +81,8 @@ class MainView: UIView {
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.backgroundColor = .clear
         collection.register(WeekCollectionViewCell.self, forCellWithReuseIdentifier: WeekCollectionViewCell.identifier)
-//        collection.showsHorizontalScrollIndicator = false
         collection.decelerationRate = .fast
         collection.alwaysBounceHorizontal = true
-//        collection.isPagingEnabled = false
         return collection
     }()
     
@@ -100,15 +98,39 @@ class MainView: UIView {
         return button
     }()
     
-    let lineView = CustomSmoothLineView(points:
-                                            [
-                                                CGPoint(x: 24, y: 147.5),
-                                                CGPoint(x: 119, y: 100),
-                                                CGPoint(x: 200, y: 120),
-//                                                CGPoint(x: 295, y: 60),
-//                                                CGPoint(x: 390, y: 60),
-                                                CGPoint(x: UIScreen.main.bounds.width-26, y: 147.5),
-                                            ])
+    lazy var backView = {
+        let view = UIView()
+        view.layer.cornerRadius = 10
+        view.backgroundColor = UIColor(hex: "#DFAE53", alpha: 0.8)
+        return view
+    }()
+    
+    lazy var timeImage = {
+        let image = UIImageView(image: UIImage(named: "clock"))
+        image.contentMode = .scaleAspectFit
+        return image
+    }()
+    
+    lazy var clockTitle = {
+        let label = UILabel()
+        label.text = "24-hour forecast"
+        label.font = .inter(size: 14, weight: .medium)
+        label.textColor = .white
+        return label
+    }()
+    
+    let chartView = {
+        let temp = (UIScreen.main.bounds.width - 48) / 5
+        let points = [(x: CGFloat(0), y: CGFloat(90)),
+                      (x: CGFloat(temp), y: CGFloat(100)),
+                      (x: CGFloat(temp * 2), y: CGFloat(120)),
+                      (x: CGFloat(temp * 3), y: CGFloat(110)),
+                      (x: CGFloat(temp * 4), y: CGFloat(120)),
+                      (x: UIScreen.main.bounds.width - 24, y: CGFloat(100))
+        ]
+        let temperatures = ["", "20°", "100°", "50°", "150°", ""]
+        return SmoothChartView(points: points, temperatures: temperatures)
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -133,7 +155,10 @@ class MainView: UIView {
         backImage.addSubview(weekCollectionView)
         addSubview(leftButton)
         addSubview(rightButton)
-        addSubview(lineView)
+        addSubview(backView)
+        backView.addSubview(timeImage)
+        backView.addSubview(clockTitle)
+        backView.addSubview(chartView)
         
         backImage.snp.makeConstraints { make in
             make.edges.equalToSuperview()
@@ -213,11 +238,29 @@ class MainView: UIView {
             make.height.equalTo(DHeight(to: 26))
         }
         
-        lineView.snp.makeConstraints { make in
+        backView.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(DWidth(to: 24))
             make.bottom.equalToSuperview()
             make.height.equalTo(DHeight(to: 285))
             make.width.equalTo(DWidth(to: 382))
+        }
+        
+        timeImage.snp.makeConstraints { make in
+            make.leading.equalToSuperview().offset(DWidth(to: 11))
+            make.top.equalToSuperview().offset(DHeight(to: 12))
+            make.height.equalTo(16)
+            make.width.equalTo(16)
+        }
+        
+        clockTitle.snp.makeConstraints { make in
+            make.centerY.equalTo(timeImage.snp.centerY)
+            make.leading.equalTo(timeImage.snp.trailing).offset(6)
+        }
+        
+        chartView.snp.makeConstraints { make in
+            make.bottom.equalToSuperview().offset(-50)
+            make.top.equalTo(clockTitle.snp.bottom)
+            make.leading.trailing.equalToSuperview()
         }
     }
 }

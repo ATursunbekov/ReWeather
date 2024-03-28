@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7717D1D02BB4A5F300619857 /* WeekCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7717D1CF2BB4A5F300619857 /* WeekCollectionViewCell.swift */; };
-		77DA4AB02BB56B2300E3F636 /* CustomLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DA4AAF2BB56B2300E3F636 /* CustomLineView.swift */; };
+		77DA4AB02BB56B2300E3F636 /* ForcastChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DA4AAF2BB56B2300E3F636 /* ForcastChart.swift */; };
 		77DA4AB32BB5799F00E3F636 /* Extension+NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DA4AB22BB5799F00E3F636 /* Extension+NSObject.swift */; };
 		77E011C82BB41A61003E6AC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E011C72BB41A61003E6AC5 /* AppDelegate.swift */; };
 		77E011CA2BB41A61003E6AC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E011C92BB41A61003E6AC5 /* SceneDelegate.swift */; };
@@ -26,7 +26,7 @@
 
 /* Begin PBXFileReference section */
 		7717D1CF2BB4A5F300619857 /* WeekCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekCollectionViewCell.swift; sourceTree = "<group>"; };
-		77DA4AAF2BB56B2300E3F636 /* CustomLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLineView.swift; sourceTree = "<group>"; };
+		77DA4AAF2BB56B2300E3F636 /* ForcastChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForcastChart.swift; sourceTree = "<group>"; };
 		77DA4AB22BB5799F00E3F636 /* Extension+NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+NSObject.swift"; sourceTree = "<group>"; };
 		77E011C42BB41A61003E6AC5 /* ReWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77E011C72BB41A61003E6AC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 				7717D1CE2BB4A5D000619857 /* CustomCells */,
 				77E011CB2BB41A61003E6AC5 /* MainViewControler.swift */,
 				77E011E72BB43749003E6AC5 /* MainView.swift */,
-				77DA4AAF2BB56B2300E3F636 /* CustomLineView.swift */,
+				77DA4AAF2BB56B2300E3F636 /* ForcastChart.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -233,7 +233,7 @@
 				77E011CC2BB41A61003E6AC5 /* MainViewControler.swift in Sources */,
 				77E011C82BB41A61003E6AC5 /* AppDelegate.swift in Sources */,
 				77E011CA2BB41A61003E6AC5 /* SceneDelegate.swift in Sources */,
-				77DA4AB02BB56B2300E3F636 /* CustomLineView.swift in Sources */,
+				77DA4AB02BB56B2300E3F636 /* ForcastChart.swift in Sources */,
 				77E011E22BB4256B003E6AC5 /* Extension+UIColor.swift in Sources */,
 				7717D1D02BB4A5F300619857 /* WeekCollectionViewCell.swift in Sources */,
 				77DA4AB32BB5799F00E3F636 /* Extension+NSObject.swift in Sources */,
