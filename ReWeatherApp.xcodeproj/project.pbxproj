@@ -10,6 +10,8 @@
 		7717D1D02BB4A5F300619857 /* WeekCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7717D1CF2BB4A5F300619857 /* WeekCollectionViewCell.swift */; };
 		77DA4AB02BB56B2300E3F636 /* ForcastChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DA4AAF2BB56B2300E3F636 /* ForcastChart.swift */; };
 		77DA4AB32BB5799F00E3F636 /* Extension+NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DA4AB22BB5799F00E3F636 /* Extension+NSObject.swift */; };
+		77DA4AB62BB5FD9300E3F636 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DA4AB52BB5FD9300E3F636 /* NetworkService.swift */; };
+		77DA4AB92BB5FF3800E3F636 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DA4AB82BB5FF3800E3F636 /* API.swift */; };
 		77E011C82BB41A61003E6AC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E011C72BB41A61003E6AC5 /* AppDelegate.swift */; };
 		77E011CA2BB41A61003E6AC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E011C92BB41A61003E6AC5 /* SceneDelegate.swift */; };
 		77E011CC2BB41A61003E6AC5 /* MainViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E011CB2BB41A61003E6AC5 /* MainViewControler.swift */; };
@@ -28,6 +30,8 @@
 		7717D1CF2BB4A5F300619857 /* WeekCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekCollectionViewCell.swift; sourceTree = "<group>"; };
 		77DA4AAF2BB56B2300E3F636 /* ForcastChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForcastChart.swift; sourceTree = "<group>"; };
 		77DA4AB22BB5799F00E3F636 /* Extension+NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+NSObject.swift"; sourceTree = "<group>"; };
+		77DA4AB52BB5FD9300E3F636 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		77DA4AB82BB5FF3800E3F636 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		77E011C42BB41A61003E6AC5 /* ReWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77E011C72BB41A61003E6AC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77E011C92BB41A61003E6AC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 		77DA4AAE2BB550EB00E3F636 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				77DA4AB52BB5FD9300E3F636 /* NetworkService.swift */,
+				77DA4AB82BB5FF3800E3F636 /* API.swift */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -73,8 +79,17 @@
 		77DA4AB12BB570E800E3F636 /* ForcastView */ = {
 			isa = PBXGroup;
 			children = (
+				77DA4AAF2BB56B2300E3F636 /* ForcastChart.swift */,
 			);
 			path = ForcastView;
+			sourceTree = "<group>";
+		};
+		77DA4AB42BB5FABB00E3F636 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				77E011E72BB43749003E6AC5 /* MainView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		77E011BB2BB41A61003E6AC5 = {
@@ -139,11 +154,10 @@
 		77E011E62BB4270A003E6AC5 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				77DA4AB42BB5FABB00E3F636 /* View */,
 				77DA4AB12BB570E800E3F636 /* ForcastView */,
 				7717D1CE2BB4A5D000619857 /* CustomCells */,
 				77E011CB2BB41A61003E6AC5 /* MainViewControler.swift */,
-				77E011E72BB43749003E6AC5 /* MainView.swift */,
-				77DA4AAF2BB56B2300E3F636 /* ForcastChart.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -197,8 +211,8 @@
 			);
 			mainGroup = 77E011BB2BB41A61003E6AC5;
 			packageReferences = (
-				77E011E92BB4379B003E6AC5 /* XCRemoteSwiftPackageReference "Moya" */,
 				77E011EA2BB437B7003E6AC5 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				77DA4AB72BB5FDE500E3F636 /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = 77E011C52BB41A61003E6AC5 /* Products */;
 			projectDirPath = "";
@@ -228,6 +242,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77DA4AB92BB5FF3800E3F636 /* API.swift in Sources */,
+				77DA4AB62BB5FD9300E3F636 /* NetworkService.swift in Sources */,
 				77E011E42BB425A5003E6AC5 /* Extension+UIFont.swift in Sources */,
 				77E011E82BB4374A003E6AC5 /* MainView.swift in Sources */,
 				77E011CC2BB41A61003E6AC5 /* MainViewControler.swift in Sources */,
@@ -459,7 +475,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		77E011E92BB4379B003E6AC5 /* XCRemoteSwiftPackageReference "Moya" */ = {
+		77DA4AB72BB5FDE500E3F636 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
 			requirement = {

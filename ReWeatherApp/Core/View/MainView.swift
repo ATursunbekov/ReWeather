@@ -119,6 +119,17 @@ class MainView: UIView {
         return label
     }()
     
+    lazy var forcastLabel = {
+        let label = UILabel()
+        label.text = "5-day forecast"
+        label.textColor = .white
+        label.layer.cornerRadius = DHeight(to: 14)
+        label.backgroundColor = UIColor(hex: "#EACA8F")
+        label.layer.masksToBounds = true
+        label.textAlignment = .center
+        return label
+    }()
+    
     let chartView = {
         let temp = (UIScreen.main.bounds.width - 48) / 5
         let points = [(x: CGFloat(0), y: CGFloat(90)),
@@ -159,6 +170,7 @@ class MainView: UIView {
         backView.addSubview(timeImage)
         backView.addSubview(clockTitle)
         backView.addSubview(chartView)
+        backView.addSubview(forcastLabel)
         
         backImage.snp.makeConstraints { make in
             make.edges.equalToSuperview()
@@ -261,6 +273,13 @@ class MainView: UIView {
             make.bottom.equalToSuperview().offset(-50)
             make.top.equalTo(clockTitle.snp.bottom)
             make.leading.trailing.equalToSuperview()
+        }
+        
+        forcastLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.width.equalTo(DWidth(to: 205))
+            make.height.equalTo(DHeight(to: DHeight(to: 30)))
+            make.bottom.equalToSuperview().offset(DHeight(to: -20))
         }
     }
 }
