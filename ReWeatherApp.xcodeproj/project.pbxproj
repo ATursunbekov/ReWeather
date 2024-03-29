@@ -12,6 +12,9 @@
 		77B57DF72BB6F986000FFDA9 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B57DF62BB6F986000FFDA9 /* LocationModel.swift */; };
 		77B57DF92BB6F9C2000FFDA9 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B57DF82BB6F9C2000FFDA9 /* WeatherModel.swift */; };
 		77B57DFC2BB6FA21000FFDA9 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B57DFB2BB6FA21000FFDA9 /* DataManager.swift */; };
+		77B57E012BB73203000FFDA9 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B57E002BB73203000FFDA9 /* SearchView.swift */; };
+		77B57E032BB74AD1000FFDA9 /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B57E022BB74AD1000FFDA9 /* Extension+UIViewController.swift */; };
+		77B57E052BB74D95000FFDA9 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B57E042BB74D95000FFDA9 /* SearchTableViewCell.swift */; };
 		77DA4AB02BB56B2300E3F636 /* ForcastChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DA4AAF2BB56B2300E3F636 /* ForcastChart.swift */; };
 		77DA4AB32BB5799F00E3F636 /* Extension+NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DA4AB22BB5799F00E3F636 /* Extension+NSObject.swift */; };
 		77DA4AB62BB5FD9300E3F636 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DA4AB52BB5FD9300E3F636 /* NetworkService.swift */; };
@@ -39,6 +42,9 @@
 		77B57DF62BB6F986000FFDA9 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		77B57DF82BB6F9C2000FFDA9 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		77B57DFB2BB6FA21000FFDA9 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		77B57E002BB73203000FFDA9 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		77B57E022BB74AD1000FFDA9 /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
+		77B57E042BB74D95000FFDA9 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		77DA4AAF2BB56B2300E3F636 /* ForcastChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForcastChart.swift; sourceTree = "<group>"; };
 		77DA4AB22BB5799F00E3F636 /* Extension+NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+NSObject.swift"; sourceTree = "<group>"; };
 		77DA4AB52BB5FD9300E3F636 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -84,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				7717D1CF2BB4A5F300619857 /* WeekCollectionViewCell.swift */,
+				77B57E042BB74D95000FFDA9 /* SearchTableViewCell.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -103,6 +110,26 @@
 				77B57DFB2BB6FA21000FFDA9 /* DataManager.swift */,
 			);
 			path = DataManager;
+			sourceTree = "<group>";
+		};
+		77B57DFE2BB731BF000FFDA9 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				77B57DF32BB6F545000FFDA9 /* MainViewModel.swift */,
+				77E011CB2BB41A61003E6AC5 /* MainViewControler.swift */,
+				7717D1CE2BB4A5D000619857 /* CustomCells */,
+				77DA4AB12BB570E800E3F636 /* ForcastView */,
+				77DA4AB42BB5FABB00E3F636 /* View */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		77B57DFF2BB731F3000FFDA9 /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				77B57E002BB73203000FFDA9 /* SearchView.swift */,
+			);
+			path = SearchView;
 			sourceTree = "<group>";
 		};
 		77DA4AAE2BB550EB00E3F636 /* NetworkLayer */ = {
@@ -178,6 +205,7 @@
 				77E011E12BB4256B003E6AC5 /* Extension+UIColor.swift */,
 				77E011E32BB425A5003E6AC5 /* Extension+UIFont.swift */,
 				77DA4AB22BB5799F00E3F636 /* Extension+NSObject.swift */,
+				77B57E022BB74AD1000FFDA9 /* Extension+UIViewController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -196,11 +224,8 @@
 		77E011E62BB4270A003E6AC5 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				77DA4AB42BB5FABB00E3F636 /* View */,
-				77DA4AB12BB570E800E3F636 /* ForcastView */,
-				7717D1CE2BB4A5D000619857 /* CustomCells */,
-				77E011CB2BB41A61003E6AC5 /* MainViewControler.swift */,
-				77B57DF32BB6F545000FFDA9 /* MainViewModel.swift */,
+				77B57DFF2BB731F3000FFDA9 /* SearchView */,
+				77B57DFE2BB731BF000FFDA9 /* MainView */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -341,14 +366,17 @@
 				77B57DFC2BB6FA21000FFDA9 /* DataManager.swift in Sources */,
 				77DA4AB62BB5FD9300E3F636 /* NetworkService.swift in Sources */,
 				77E011E42BB425A5003E6AC5 /* Extension+UIFont.swift in Sources */,
+				77B57E032BB74AD1000FFDA9 /* Extension+UIViewController.swift in Sources */,
 				77E011E82BB4374A003E6AC5 /* MainView.swift in Sources */,
 				77E011CC2BB41A61003E6AC5 /* MainViewControler.swift in Sources */,
 				77E011C82BB41A61003E6AC5 /* AppDelegate.swift in Sources */,
 				77E011CA2BB41A61003E6AC5 /* SceneDelegate.swift in Sources */,
+				77B57E052BB74D95000FFDA9 /* SearchTableViewCell.swift in Sources */,
 				77DA4AB02BB56B2300E3F636 /* ForcastChart.swift in Sources */,
 				77E011E22BB4256B003E6AC5 /* Extension+UIColor.swift in Sources */,
 				7717D1D02BB4A5F300619857 /* WeekCollectionViewCell.swift in Sources */,
 				77B57DF92BB6F9C2000FFDA9 /* WeatherModel.swift in Sources */,
+				77B57E012BB73203000FFDA9 /* SearchView.swift in Sources */,
 				77B57DF72BB6F986000FFDA9 /* LocationModel.swift in Sources */,
 				77DA4AB32BB5799F00E3F636 /* Extension+NSObject.swift in Sources */,
 				77B57DF42BB6F545000FFDA9 /* MainViewModel.swift in Sources */,

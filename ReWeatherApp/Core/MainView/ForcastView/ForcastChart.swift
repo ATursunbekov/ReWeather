@@ -75,3 +75,13 @@ class SmoothChartView: UIView {
         }
     }
 }
+
+extension SmoothChartView {
+    func updateChart(withPoints points: [(x: CGFloat, y: CGFloat)], temperatures: [String], image: UIImage? = nil) {
+        self.points = points
+        self.temperatures = temperatures
+        self.image = image
+        setNeedsDisplay()
+    }
+}
+

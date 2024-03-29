@@ -15,7 +15,10 @@ class MainView: UIView {
         return image
     }()
     
-    lazy var locationView = UIView()
+    lazy var locationView = {
+        let view = UIButton()
+        return view
+    }()
     
     lazy var locationImage = {
         let image = UIImageView(image: UIImage(named: "location"))
@@ -130,14 +133,14 @@ class MainView: UIView {
     
     let chartView = {
         let temp = (UIScreen.main.bounds.width - 48) / 5
-        let points = [(x: CGFloat(0), y: CGFloat(90)),
-                      (x: CGFloat(temp), y: CGFloat(100)),
-                      (x: CGFloat(temp * 2), y: CGFloat(120)),
-                      (x: CGFloat(temp * 3), y: CGFloat(110)),
-                      (x: CGFloat(temp * 4), y: CGFloat(120)),
+        let points = [(x: CGFloat(0), y: CGFloat(80)),
+                      (x: CGFloat(temp), y: CGFloat(80 + 9)),
+                      (x: CGFloat(temp * 2), y: CGFloat(80 + 13)),
+                      (x: CGFloat(temp * 3), y: CGFloat(80 + 14)),
+                      (x: CGFloat(temp * 4), y: CGFloat(80 + 11)),
                       (x: UIScreen.main.bounds.width - 24, y: CGFloat(100))
         ]
-        let temperatures = ["", "20°", "100°", "50°", "150°", ""]
+        let temperatures = ["", "9°", "13°", "14°", "11°", ""]
         return SmoothChartView(points: points, temperatures: temperatures)
     }()
     

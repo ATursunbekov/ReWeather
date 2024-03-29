@@ -26,8 +26,8 @@ class MainViewCotnroller: UIViewController {
         super.viewDidLoad()
         setupDelegates()
         setupTargets()
-        setupGestureRecognizers()
         viewModel.getLocation(cityName: "Bishkek")
+        navigationController?.navigationBar.isHidden = true
     }
     
     override func loadView() {
@@ -43,15 +43,14 @@ class MainViewCotnroller: UIViewController {
     func setupTargets() {
         mainView.leftButton.addTarget(self, action: #selector(leftTapped), for: .touchUpInside)
         mainView.rightButton.addTarget(self, action: #selector(rightTapped), for: .touchUpInside)
-    }
-    
-    func setupGestureRecognizers() {
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
-        mainView.locationView.addGestureRecognizer(tapGestureRecognizer)
+        mainView.locationView.addTarget(self, action: #selector(viewTapped), for: .touchUpInside)
     }
 
     @objc func viewTapped() {
-        print("View was tapped!")
+        let searchView = SearchView()
+        searchView.modalPresentationStyle = .overFullScreen
+        searchView.delegate = self
+        present(searchView, animated: false)
     }
     
     @objc func leftTapped() {
@@ -59,6 +58,7 @@ class MainViewCotnroller: UIViewController {
         var previousIndexPath = IndexPath(item: selectedWeek, section: 0)
         mainView.weekCollectionView.cellForItem(at: previousIndexPath)
         selectedWeek -= 1
+        updateDataInscrolling()
         previousIndexPath = IndexPath(item: selectedWeek, section: 0)
         mainView.weekCollectionView.scrollToItem(at: previousIndexPath, at: .centeredHorizontally, animated: true)
         mainView.weekCollectionView.reloadData()
@@ -67,12 +67,17 @@ class MainViewCotnroller: UIViewController {
     @objc func rightTapped() {
         guard selectedWeek < viewModel.weekWeather.count - 1 else { return }
         selectedWeek += 1
-        mainView.tempLabel.text = "\(Int(viewModel.weekWeather[selectedWeek].temp.day))°C"
-        mainView.weatherImage.image = UIImage(named: viewModel.weekWeather[selectedWeek].weather[0].icon)
-        mainView.stateLabel.text = viewModel.weekWeather[selectedWeek].weather[0].main
+        updateDataInscrolling()
         let previousIndexPath = IndexPath(item: selectedWeek, section: 0)
         mainView.weekCollectionView.scrollToItem(at: previousIndexPath, at: .centeredHorizontally, animated: true)
         mainView.weekCollectionView.reloadData()
+    }
+    
+    func updateDataInscrolling() {
+        mainView.tempLabel.text = "\(Int(viewModel.weekWeather[selectedWeek].temp.day))°C"
+        mainView.weatherImage.image = UIImage(named: viewModel.weekWeather[selectedWeek].weather[0].icon)
+        mainView.stateLabel.text = viewModel.weekWeather[selectedWeek].weather[0].main
+        mainView.dateLabel.text = formatDate(from: TimeInterval(viewModel.weekWeather[selectedWeek].dt))
     }
 }
 
@@ -136,5 +141,12 @@ extension MainViewCotnroller: MainViewModelDelegate {
         dateFormatter.timeZone = TimeZone.current
         
         return dateFormatter.string(from: date).uppercased()
+    }
+}
+
+extension MainViewCotnroller: SearchViewDelegate {
+    func searchPressed(cityName: String) {
+        mainView.cityName.text = cityName
+        viewModel.getLocation(cityName: cityName)
     }
 }

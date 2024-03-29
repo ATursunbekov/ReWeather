@@ -13,6 +13,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        if let savedCities = UserDefaults.standard.data(forKey: "cities") {
+            let decoder = JSONDecoder()
+            if let cities = try? decoder.decode([String].self, from: savedCities) {
+                DataManager.shared.cities = cities
+            }
+        }
         return true
     }
 
