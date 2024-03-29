@@ -1,0 +1,6 @@
+framework module Pods_ReWeatherApp {
+  umbrella header "Pods-ReWeatherApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

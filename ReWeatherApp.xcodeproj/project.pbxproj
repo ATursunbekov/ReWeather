@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		7717D1D02BB4A5F300619857 /* WeekCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7717D1CF2BB4A5F300619857 /* WeekCollectionViewCell.swift */; };
+		77B57DF42BB6F545000FFDA9 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B57DF32BB6F545000FFDA9 /* MainViewModel.swift */; };
+		77B57DF72BB6F986000FFDA9 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B57DF62BB6F986000FFDA9 /* LocationModel.swift */; };
+		77B57DF92BB6F9C2000FFDA9 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B57DF82BB6F9C2000FFDA9 /* WeatherModel.swift */; };
+		77B57DFC2BB6FA21000FFDA9 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B57DFB2BB6FA21000FFDA9 /* DataManager.swift */; };
 		77DA4AB02BB56B2300E3F636 /* ForcastChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DA4AAF2BB56B2300E3F636 /* ForcastChart.swift */; };
 		77DA4AB32BB5799F00E3F636 /* Extension+NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DA4AB22BB5799F00E3F636 /* Extension+NSObject.swift */; };
 		77DA4AB62BB5FD9300E3F636 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DA4AB52BB5FD9300E3F636 /* NetworkService.swift */; };
@@ -24,10 +28,17 @@
 		77E011EE2BB437B7003E6AC5 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 77E011ED2BB437B7003E6AC5 /* SnapKit-Dynamic */; };
 		77E011F12BB443BE003E6AC5 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77E011EF2BB443BE003E6AC5 /* Inter-Medium.ttf */; };
 		77E011F22BB443BE003E6AC5 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77E011F02BB443BE003E6AC5 /* Inter-Regular.ttf */; };
+		9865DA4616F413346B4A7982 /* Pods_ReWeatherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4C4A0051BA3B49BD898B00A /* Pods_ReWeatherApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		323F77EFD32A94143C4A0AF2 /* Pods-ReWeatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReWeatherApp.release.xcconfig"; path = "Target Support Files/Pods-ReWeatherApp/Pods-ReWeatherApp.release.xcconfig"; sourceTree = "<group>"; };
+		33065D4422E7586881F29DE8 /* Pods-ReWeatherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReWeatherApp.debug.xcconfig"; path = "Target Support Files/Pods-ReWeatherApp/Pods-ReWeatherApp.debug.xcconfig"; sourceTree = "<group>"; };
 		7717D1CF2BB4A5F300619857 /* WeekCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekCollectionViewCell.swift; sourceTree = "<group>"; };
+		77B57DF32BB6F545000FFDA9 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		77B57DF62BB6F986000FFDA9 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		77B57DF82BB6F9C2000FFDA9 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		77B57DFB2BB6FA21000FFDA9 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		77DA4AAF2BB56B2300E3F636 /* ForcastChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForcastChart.swift; sourceTree = "<group>"; };
 		77DA4AB22BB5799F00E3F636 /* Extension+NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+NSObject.swift"; sourceTree = "<group>"; };
 		77DA4AB52BB5FD9300E3F636 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -44,6 +55,7 @@
 		77E011E72BB43749003E6AC5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		77E011EF2BB443BE003E6AC5 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Medium.ttf"; path = "../../../../../../Downloads/Inter/static/Inter-Medium.ttf"; sourceTree = "<group>"; };
 		77E011F02BB443BE003E6AC5 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Regular.ttf"; path = "../../../../../../Downloads/Inter/static/Inter-Regular.ttf"; sourceTree = "<group>"; };
+		B4C4A0051BA3B49BD898B00A /* Pods_ReWeatherApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReWeatherApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,12 +65,21 @@
 			files = (
 				77E011EC2BB437B7003E6AC5 /* SnapKit in Frameworks */,
 				77E011EE2BB437B7003E6AC5 /* SnapKit-Dynamic in Frameworks */,
+				9865DA4616F413346B4A7982 /* Pods_ReWeatherApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		490EDB936CA894AF0E8E79E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B4C4A0051BA3B49BD898B00A /* Pods_ReWeatherApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7717D1CE2BB4A5D000619857 /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -67,9 +88,27 @@
 			path = CustomCells;
 			sourceTree = "<group>";
 		};
+		77B57DF52BB6F97D000FFDA9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				77B57DF62BB6F986000FFDA9 /* LocationModel.swift */,
+				77B57DF82BB6F9C2000FFDA9 /* WeatherModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		77B57DFA2BB6FA11000FFDA9 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				77B57DFB2BB6FA21000FFDA9 /* DataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
 		77DA4AAE2BB550EB00E3F636 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				77B57DF52BB6F97D000FFDA9 /* Models */,
 				77DA4AB52BB5FD9300E3F636 /* NetworkService.swift */,
 				77DA4AB82BB5FF3800E3F636 /* API.swift */,
 			);
@@ -97,6 +136,8 @@
 			children = (
 				77E011C62BB41A61003E6AC5 /* ReWeatherApp */,
 				77E011C52BB41A61003E6AC5 /* Products */,
+				E8C0157900668AC890D08D8C /* Pods */,
+				490EDB936CA894AF0E8E79E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +152,7 @@
 		77E011C62BB41A61003E6AC5 /* ReWeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				77B57DFA2BB6FA11000FFDA9 /* DataManager */,
 				77DA4AAE2BB550EB00E3F636 /* NetworkLayer */,
 				77E011E62BB4270A003E6AC5 /* Core */,
 				77E011E02BB4255E003E6AC5 /* Extension */,
@@ -158,8 +200,18 @@
 				77DA4AB12BB570E800E3F636 /* ForcastView */,
 				7717D1CE2BB4A5D000619857 /* CustomCells */,
 				77E011CB2BB41A61003E6AC5 /* MainViewControler.swift */,
+				77B57DF32BB6F545000FFDA9 /* MainViewModel.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		E8C0157900668AC890D08D8C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				33065D4422E7586881F29DE8 /* Pods-ReWeatherApp.debug.xcconfig */,
+				323F77EFD32A94143C4A0AF2 /* Pods-ReWeatherApp.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,9 +221,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77E011D82BB41A63003E6AC5 /* Build configuration list for PBXNativeTarget "ReWeatherApp" */;
 			buildPhases = (
+				BED511308D7DFB67DCD2A74D /* [CP] Check Pods Manifest.lock */,
 				77E011C02BB41A61003E6AC5 /* Sources */,
 				77E011C12BB41A61003E6AC5 /* Frameworks */,
 				77E011C22BB41A61003E6AC5 /* Resources */,
+				0B41CE777C27637DA009C986 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -212,7 +266,6 @@
 			mainGroup = 77E011BB2BB41A61003E6AC5;
 			packageReferences = (
 				77E011EA2BB437B7003E6AC5 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				77DA4AB72BB5FDE500E3F636 /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = 77E011C52BB41A61003E6AC5 /* Products */;
 			projectDirPath = "";
@@ -237,12 +290,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0B41CE777C27637DA009C986 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReWeatherApp/Pods-ReWeatherApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReWeatherApp/Pods-ReWeatherApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReWeatherApp/Pods-ReWeatherApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BED511308D7DFB67DCD2A74D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReWeatherApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		77E011C02BB41A61003E6AC5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				77DA4AB92BB5FF3800E3F636 /* API.swift in Sources */,
+				77B57DFC2BB6FA21000FFDA9 /* DataManager.swift in Sources */,
 				77DA4AB62BB5FD9300E3F636 /* NetworkService.swift in Sources */,
 				77E011E42BB425A5003E6AC5 /* Extension+UIFont.swift in Sources */,
 				77E011E82BB4374A003E6AC5 /* MainView.swift in Sources */,
@@ -252,7 +348,10 @@
 				77DA4AB02BB56B2300E3F636 /* ForcastChart.swift in Sources */,
 				77E011E22BB4256B003E6AC5 /* Extension+UIColor.swift in Sources */,
 				7717D1D02BB4A5F300619857 /* WeekCollectionViewCell.swift in Sources */,
+				77B57DF92BB6F9C2000FFDA9 /* WeatherModel.swift in Sources */,
+				77B57DF72BB6F986000FFDA9 /* LocationModel.swift in Sources */,
 				77DA4AB32BB5799F00E3F636 /* Extension+NSObject.swift in Sources */,
+				77B57DF42BB6F545000FFDA9 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,12 +490,14 @@
 		};
 		77E011D92BB41A63003E6AC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33065D4422E7586881F29DE8 /* Pods-ReWeatherApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RPXJGA4ZYB;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ReWeatherApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -422,12 +523,14 @@
 		};
 		77E011DA2BB41A63003E6AC5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 323F77EFD32A94143C4A0AF2 /* Pods-ReWeatherApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RPXJGA4ZYB;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ReWeatherApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -475,14 +578,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		77DA4AB72BB5FDE500E3F636 /* XCRemoteSwiftPackageReference "Moya" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Moya/Moya.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 15.0.3;
-			};
-		};
 		77E011EA2BB437B7003E6AC5 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";

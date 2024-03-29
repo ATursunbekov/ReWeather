@@ -25,7 +25,7 @@ class MainView: UIView {
     
     lazy var cityName: UILabel = {
         let name = UILabel()
-        name.text = "New York"
+        name.text = "Bishkek"
         name.font = .inter(size: 20, weight: .medium)
         name.textColor = .white
         return name
@@ -39,8 +39,6 @@ class MainView: UIView {
     
     lazy var avatarImage = {
         let image = UIImageView(image: UIImage(named: "avatar"))
-//        image.layer.cornerRadius = 15
-//        image.clipsToBounds = true
         image.contentMode = .scaleAspectFit
         return image
     }()

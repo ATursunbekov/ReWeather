@@ -3,18 +3,20 @@
 //  ReWeatherApp
 //
 //  Created by Alikhan Tursunbekov on 29/3/24.
-//
 
-import Moya
 import Foundation
+import Moya
 
 enum API {
-    case getWeather(lat: Double, lon: Double, exclude: [String], appid: String, units: String)
+    case getLocation(cityName: String)
+    case getWeather(lat: Double, lon: Double)
 }
 
 extension API: TargetType {
     var baseURL: URL {
         switch self {
+        case .getLocation:
+            return URL(string: "https://api.openweathermap.org/geo/1.0")!
         case .getWeather:
             return URL(string: "https://api.openweathermap.org/data/3.0")!
         }
@@ -22,6 +24,8 @@ extension API: TargetType {
     
     var path: String {
         switch self {
+        case .getLocation:
+            return "/direct"
         case .getWeather:
             return "/onecall"
         }
@@ -29,15 +33,17 @@ extension API: TargetType {
     
     var method: Moya.Method {
         switch self {
-        case .getWeather:
+        case .getWeather, .getLocation:
             return .get
         }
     }
     
     var task: Moya.Task {
         switch self {
-        case .getWeather(let lat, let lon, let exclude, let appid, let units):
-            return .requestParameters(parameters: ["lat": lat, "lon": lon, "exclude": exclude.joined(separator: ","), "appid": appid, "units": units], encoding: URLEncoding.queryString)
+        case .getLocation(let cityName):
+            return .requestParameters(parameters: ["q": cityName, "appid": DataManager.appID], encoding: URLEncoding.queryString)
+        case .getWeather(let lat, let lon):
+            return .requestParameters(parameters: ["lat": lat, "lon": lon, "exclude": "minutely,alerts", "appid": DataManager.appID, "units": "metric"], encoding: URLEncoding.queryString)
         }
     }
     
